@@ -1,0 +1,30 @@
+{
+  "name": "backend-api",
+  "version": "1.0.0",
+  "description": "Projecct for MyContact",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudhanshukumar1729/MyContact.git"
+  },
+  "author": "Sudhanshu Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudhanshukumar1729/MyContact/issues"
+  },
+  "homepage": "https://github.com/sudhanshukumar1729/MyContact#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^9.9.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
