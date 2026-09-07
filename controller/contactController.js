@@ -10,7 +10,12 @@ const getContacts = asyncHandler(async (req, res) => {
 });
 
 const getContactsbyid = asyncHandler(async (req,res)=>{
-    res.json({message:`get contacts details for id ${req.params.id}`});
+    const contacts = await Contact.findById(req.params.id);
+    if(!contacts){
+        res.status(404);
+        throw new Error("contact not found");
+    }
+    res.json(contacts);
 });
 
 const createContacts = asyncHandler(async (req,res)=>{
