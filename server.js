@@ -3,6 +3,7 @@ const contactRoutes = require('./routes/routes');
 const { errorHandler } = require('./middleware/errorhandler');
 const dotenv = require('dotenv').config();
 const connectDb = require('./config/dbConnection');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get('/jsoncontacts',(req,res)=>{
     res.json({contact:"sudhanshu225202@gmail.com"});
 });
 
+app.use('/api/users',userRoutes);
 //Error handler middleware should be the last piece of middleware
 app.use(errorHandler);
 
